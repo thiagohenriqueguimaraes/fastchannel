@@ -1,6 +1,7 @@
 ﻿using FastChannelApi.Domain;
 using FastChannelApi.Repository;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace FastChannelApi.Controllers
 {
@@ -13,6 +14,7 @@ namespace FastChannelApi.Controllers
         }
         // GET: /api/produto/busca?codigo=1
         [HttpGet]
+        [ResponseType(typeof(Produto))]
         public Produto Busca(int codigo)
         {
             return ProdutoRepository.Busca(codigo);
