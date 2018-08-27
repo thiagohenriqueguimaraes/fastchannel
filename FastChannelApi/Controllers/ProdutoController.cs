@@ -18,7 +18,7 @@ namespace FastChannelApi.Controllers
             return ProdutoRepository.Busca(codigo);
         }
 
-        // POST: api/Default
+        // POST: /api/produto/atualiza
         public string Atualiza([FromBody]Produto produto)
         {
             var produtoDb = ProdutoRepository.Atualiza(produto);
